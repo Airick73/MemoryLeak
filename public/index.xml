@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Memory Leak</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Memory Leak</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Jun 2024 09:13:34 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automata: self-propelling memoryless machines</title>
+      <link>http://localhost:1313/posts/automata/</link>
+      <pubDate>Sat, 01 Jun 2024 09:13:34 -0400</pubDate>
+      <guid>http://localhost:1313/posts/automata/</guid>
+      <description>Why did I decide to learn about this On my journey to learn how to implement an ASR (Automatic Speech Recognition) system I fell into another rabbit hole about automata. The pre-requisete of knowledge looked like this.&#xA;ASR -&amp;gt; Kaldi (ASR library) -&amp;gt; OpenFST (Finite-State Transducer library) -&amp;gt; Automata&#xA;In my experience it seems that there is a never ending linked list of things to learn before I can get to what I really want.</description>
+    </item>
+    <item>
+      <title>Youtube Rabbit Holes</title>
+      <link>http://localhost:1313/posts/youtube-rabbit-holes/</link>
+      <pubDate>Fri, 31 May 2024 11:57:40 -0400</pubDate>
+      <guid>http://localhost:1313/posts/youtube-rabbit-holes/</guid>
+      <description>Where the content is too good to not watch them all&#xA;https://www.youtube.com/@Computerphile/videos&#xA;https://www.youtube.com/@3blue1brown&#xA;https://www.youtube.com/@Fireship</description>
+    </item>
+    <item>
+      <title>Automatic Speech Recognition (ASR) systems</title>
+      <link>http://localhost:1313/posts/asr/</link>
+      <pubDate>Fri, 31 May 2024 09:12:35 -0400</pubDate>
+      <guid>http://localhost:1313/posts/asr/</guid>
+      <description>Motivation I recently completed my first semester at Georgia Tech in which I took the AI course offered by Thad Starner. Instead of moving right into another course for the summer semester I decided to use this summer to apply what I learned to a personal project.&#xA;The most interesting topic I thought we covered was the use of Hidden Markov Models (HMMs) and how they can be used for speech recognition.</description>
+    </item>
+  </channel>
+</rss>

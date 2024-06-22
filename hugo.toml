@@ -1,0 +1,6 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Memory Leak'
+subtitle = 'A mind dump by Eric Kemmer'
+theme = "ananke"
+

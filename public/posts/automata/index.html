@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Automata: self-propelling memoryless machines | Memory Leak</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Why did I decide to learn about this On my journey to learn how to implement an ASR (Automatic Speech Recognition) system I fell into another rabbit hole about automata. The pre-requisete of knowledge looked like this.
+ASR -&gt; Kaldi (ASR library) -&gt; OpenFST (Finite-State Transducer library) -&gt; Automata
+In my experience it seems that there is a never ending linked list of things to learn before I can get to what I really want.">
+    <meta name="generator" content="Hugo 0.126.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/automata/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/automata/">
+  <meta property="og:site_name" content="Memory Leak">
+  <meta property="og:title" content="Automata: self-propelling memoryless machines">
+  <meta property="og:description" content="Why did I decide to learn about this On my journey to learn how to implement an ASR (Automatic Speech Recognition) system I fell into another rabbit hole about automata. The pre-requisete of knowledge looked like this.
+ASR -&gt; Kaldi (ASR library) -&gt; OpenFST (Finite-State Transducer library) -&gt; Automata
+In my experience it seems that there is a never ending linked list of things to learn before I can get to what I really want.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-06-01T09:13:34-04:00">
+    <meta property="article:modified_time" content="2024-06-01T09:13:34-04:00">
+
+  <meta itemprop="name" content="Automata: self-propelling memoryless machines">
+  <meta itemprop="description" content="Why did I decide to learn about this On my journey to learn how to implement an ASR (Automatic Speech Recognition) system I fell into another rabbit hole about automata. The pre-requisete of knowledge looked like this.
+ASR -&gt; Kaldi (ASR library) -&gt; OpenFST (Finite-State Transducer library) -&gt; Automata
+In my experience it seems that there is a never ending linked list of things to learn before I can get to what I really want.">
+  <meta itemprop="datePublished" content="2024-06-01T09:13:34-04:00">
+  <meta itemprop="dateModified" content="2024-06-01T09:13:34-04:00">
+  <meta itemprop="wordCount" content="400">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Automata: self-propelling memoryless machines">
+  <meta name="twitter:description" content="Why did I decide to learn about this On my journey to learn how to implement an ASR (Automatic Speech Recognition) system I fell into another rabbit hole about automata. The pre-requisete of knowledge looked like this.
+ASR -&gt; Kaldi (ASR library) -&gt; OpenFST (Finite-State Transducer library) -&gt; Automata
+In my experience it seems that there is a never ending linked list of things to learn before I can get to what I really want.">
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Memory Leak
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Automata: self-propelling memoryless machines</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-06-01T09:13:34-04:00">June 1, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="why-did-i-decide-to-learn-about-this">Why did I decide to learn about this</h2>
+<p>On my journey to learn how to implement an ASR (Automatic Speech Recognition) system I fell into another rabbit hole about automata. The pre-requisete of knowledge looked like this.</p>
+<p>ASR -&gt; Kaldi (ASR library) -&gt; OpenFST (Finite-State Transducer library) -&gt; Automata</p>
+<p>In my experience it seems that there is a never ending linked list of things to learn before I can get to what I really want. On the bright side though understanding why I need to learn something helps me learn about it in a way that school rarely does. If I had to take a class on automata just to get some credits I would suffer twice as much going through this material. That is not to say I suffered through learning this but it was necessary pit stop before I could continue with OpenFST&hellip;..so that I could continue with Kaldi&hellip;and so here is what I&rsquo;ve learned in a distilled form.</p>
+<h2 id="the-automaton-singular-form-of-automata">The Automaton (singular form of Automata)</h2>
+<p>A finite number of states in which an input transistions you to a state. Notice I didn&rsquo;t say new state. I was just about to but in a Automata you can transition to the same state. A lot like in life where some inputs lead to right where you started. The good news is sometimes the state you are in is considered a final state in which the automata upon seeing you have finished in a final state approves the given sequence. As in life sometimes consistency doesn&rsquo;t seem like progress but you never know when your state will be evaluated and you happen to be at them right place at the right time.</p>
+<h2 id="do-nothing-machines">Do nothing machines</h2>
+<h2 id="motivation-to-continue-learning">Motivation to continue learning</h2>
+<p>Something I didn&rsquo;t realize about automata is that it is foundational to understanding how compiliers work. This captures my interest because I am find it very motivating when I can start to build foundational knowledge on HEAVY concepts like how computers and programming languages work. Elon Musk makes a point to always go back to first principles when approaching a problem. That is how I would like to approach problems by first understanding the first principles and working my way back up to the problem. I think that understanding computer architecture, compilers, and even how electrons are stored in memory to represent binary can be invaluable when approaching any computer related problem.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  Memory Leak 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
