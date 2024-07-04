@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Memory Leak</title>
-    <link>https://example.org/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Memory Leak</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.126.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 May 2024 09:12:35 -0400</lastBuildDate>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 May 2024 11:57:40 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Youtube Rabbit Holes</title>
+      <link>http://localhost:1313/posts/youtube-rabbit-holes/</link>
+      <pubDate>Fri, 31 May 2024 11:57:40 -0400</pubDate>
+      <guid>http://localhost:1313/posts/youtube-rabbit-holes/</guid>
+      <description>Where the content is too good to not watch them all
+https://www.youtube.com/@Computerphile/videos
+https://www.youtube.com/@3blue1brown
+https://www.youtube.com/@Fireship</description>
+    </item>
     <item>
       <title>Automatic Speech Recognition (ASR) systems</title>
-      <link>https://example.org/posts/asr/</link>
+      <link>http://localhost:1313/posts/asr/</link>
       <pubDate>Fri, 31 May 2024 09:12:35 -0400</pubDate>
-      <guid>https://example.org/posts/asr/</guid>
-      <description>Motivation I recently completed my first semester at Georgia Tech in which I took the AI course offered by Thad Starner. Instead of moving right into another course for the summer semester I decided to use this summer to apply what I learned to a personal project.&#xA;The most interesting topic I thought we covered was the use of Hidden Markov Models (HMMs) and how they can be used for speech recognition.</description>
+      <guid>http://localhost:1313/posts/asr/</guid>
+      <description>Motivation I recently completed my first semester at Georgia Tech in which I took the AI course offered by Thad Starner. Instead of moving right into another course for the summer semester I decided to use this summer to apply what I learned to a personal project.
+The most interesting topic I thought we covered was the use of Hidden Markov Models (HMMs) and how they can be used for speech recognition.</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>about</description>
     </item>
   </channel>
 </rss>

@@ -1,8 +1,8 @@
-+++
-title = 'Percision Recall Accuracy F1score'
-date = 2024-06-14T10:43:10-04:00
-draft = true
-+++
+---
+title: 'Percision Recall Accuracy F1score'
+date: 2024-06-14T10:43:10-04:00
+draft: true
+---
 
 # Percision, Recall, and Accuracy ... why non of these click at first
 

@@ -1,8 +1,8 @@
-+++
-title = 'Imperative vs Declarative'
-date = 2024-06-09T15:27:43-04:00
-draft = true
-+++
+---
+title: 'Imperative vs Declarative'
+date: 2024-06-09T15:27:43-04:00
+draft: true
+---
 
 # Imperative vs. Declarative a trade off of abstraction
 

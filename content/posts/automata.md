@@ -1,8 +1,8 @@
-+++
-title = 'Automata: self-propelling memoryless machines'
-date = 2024-06-01T09:13:34-04:00
-draft = true
-+++
+---
+title: 'Automata: self-propelling memoryless machines'
+date: 2024-06-01T09:13:34-04:00
+draft: true
+---
 
 ## Why did I decide to learn about this 
 

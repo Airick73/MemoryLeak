@@ -1,0 +1,57 @@
+baseURL: 'https://example.org/'
+languageCode: 'en-us'
+title: 'Memory Leak'
+subtitle: 'A mind dump by Eric Kemmer'
+theme: "PaperMod"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
+params:
+  homeInfoParams:
+    Title: "Welcome to my blog Memory Leak" 
+    Content: A mind dump by Eric Kemmer with no intention of garbage collection. 
+  socialIcons:
+    - name: Personal Website
+      icon: fas fa-globe
+      url: 'https://erickemmer.com' 
+    - name: GitHub
+      icon: fab fa-github
+      url: 'https://github.com/Airick73'
+    - name: LinkedIn
+      icon: fab fa-linkedin
+      url: 'https://linkedin.com/in/erickemmer'
+    
+  comments: true
+
+  ShowBreadCrumbs: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+
+menu: 
+  main:
+    - identifier: "about"
+      name: "About"
+      url: "/about/"
+      weight: 1
+    - identifier: "tags"
+      name: "Tags"
+      url: "/tags/"
+      weight: 2
+    - identifier: "categories"
+      name: "Categories"
+      url: "/categories/"
+      weight: 3
+    - identifier: "archives"
+      name: "Archives"
+      url: "/archives/"
+      weight: 4
+    - identifier: "search"
+      name: "Search"
+      url: "/search/"
+      weight: 5

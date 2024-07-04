@@ -1,8 +1,10 @@
-+++
-title = 'Youtube Rabbit Holes'
-date = 2024-05-31T11:57:40-04:00
-draft = true
-+++
+---
+title: 'Youtube Rabbit Holes'
+date: 2024-05-31T11:57:40-04:00
+draft: false
+cover: 
+    image: /images/youtube_rabbit_hole.png
+---
 
 Where the content is too good to not watch them all
 
