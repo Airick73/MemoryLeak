@@ -4,7 +4,7 @@ Welcome to the repository for *Memory Leak*, my personal blog.
 
 ## About the Blog
 
-*Memory Leak* is built with [Hugo](https://gohugo.io/), a fast and modern static site generator, and uses the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme for its sleek and responsive design. I've made some modifications to paper mod theme by overriding the certain files in my `layout` folder.
+*Memory Leak* is built with [Hugo](https://gohugo.io/), a fast and modern static site generator, and uses the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme for its sleek and responsive design. I've made some modifications to paper mod theme by overriding certain files in my `layout` folder.
 
 ### Features
 
