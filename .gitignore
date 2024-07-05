@@ -1,0 +1,22 @@
+# Hugo generated files
+/public/
+/resources/_gen/
+/hugo_stats.json
+.hugo_build.lock
+
+# Dependency directories
+/node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE and text editor directories
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Temporary files
+*.bak
+*.tmp
+*.swp

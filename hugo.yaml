@@ -3,6 +3,7 @@ languageCode: 'en-us'
 title: 'Memory Leak'
 subtitle: 'A mind dump by Eric Kemmer'
 theme: "PaperMod"
+copyright: "© [Eric Kemmer](https://github.com/airick73)"
 
 outputs:
   home:
@@ -26,7 +27,6 @@ params:
       url: 'https://linkedin.com/in/erickemmer'
     
   comments: true
-
   ShowBreadCrumbs: true
   ShowReadingTime: true
   ShowShareButtons: true

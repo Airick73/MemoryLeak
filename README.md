@@ -22,3 +22,4 @@ Once Hugo is installed, clone this repository to your local machine:
 ```bash
 git clone https://github.com/Airick73/MemoryLeak.git
 cd MemoryLeak
+hugo server 
