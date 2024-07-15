@@ -19,6 +19,8 @@ A finite number of states in which an input transistions you to a state. Notice 
 ## Do nothing machines 
 
 
+
+
 ## Motivation to continue learning 
 
 Something I didn't realize about automata is that it is foundational to understanding how compiliers work. This captures my interest because I am find it very motivating when I can start to build foundational knowledge on HEAVY concepts like how computers and programming languages work. Elon Musk makes a point to always go back to first principles when approaching a problem. That is how I would like to approach problems by first understanding the first principles and working my way back up to the problem. I think that understanding computer architecture, compilers, and even how electrons are stored in memory to represent binary can be invaluable when approaching any computer related problem. 

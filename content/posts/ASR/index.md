@@ -4,8 +4,8 @@ date: 2024-05-31T09:12:35-04:00
 draft: false
 cover: 
     image: images/kaldi_logo.png
-tags: ["HMM", "Speech Recognition", "Machine Learning"]
-categories: ["Projects"]
+tags: ["HMM", "Projects", "Machine Learning"]
+categories: ["Speech Recognition"]
 ---
 
 ## Motivation 

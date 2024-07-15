@@ -6,6 +6,10 @@
 <html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
 
 <head>
+    {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+    {{ end }}
+
     {{- partial "head.html" . }}
 </head>
 

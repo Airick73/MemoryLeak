@@ -4,6 +4,9 @@ title: 'Memory Leak'
 subtitle: 'A mind dump by Eric Kemmer'
 theme: "PaperMod"
 copyright: "© [Eric Kemmer](https://github.com/airick73)"
+enableEmoji: true
+enableInlineShortcodes: true
+
 
 outputs:
   home:
@@ -32,6 +35,8 @@ params:
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowCodeCopyButtons: true
+  math: true
+
 
 menu: 
   main:
@@ -55,3 +60,20 @@ menu:
       name: "Search"
       url: "/search/"
       weight: 5
+
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+        enable: true
+
+
